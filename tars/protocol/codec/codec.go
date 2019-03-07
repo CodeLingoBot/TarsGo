@@ -114,7 +114,7 @@ func bReadU64(r *bytes.Reader, data *uint64) error {
 	return err
 }
 
-//go:nosplit
+// go:nosplit
 func (b *Buffer) WriteHead(ty byte, tag byte) error {
 	if tag < 15 {
 		data := (tag << 4) | ty
